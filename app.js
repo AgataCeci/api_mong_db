@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const contatoRouter = require('./rotes/contatosRoutes');
+const contatoRouter = require('./routes/contatosRoutes');
 app.use('/contatos', contatoRouter);
 
 mongoose.connect(process.env.MONGODB_URI, {
